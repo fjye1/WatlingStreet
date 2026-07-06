@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+{% endblock %}
+
+{% block title %}Watling Street Home{% endblock %}
+
+{% block content %}
+Test hello world
+<div class="hero-wrapper">
+    <div class="hero-container">
+        <img
+                src="{{ url_for('static', filename='images/back_image.webp') }}"
+                alt="Relaxing massage treatment"
+                class="hero-img rounded"
+        />
+        <div class="hero-text-overlay">
+            <div class="hero-text-inner">
+                <h1 class="brand-name fade-text">Watling Street</h1>
+                <div class="hero-text-labels">
+                    <span class="location fade-text">coffee roasting</span>
+                    <span class="tagline"></span>
+                </div>
+            </div>
+        </div>
+        <a id="book-link" href="#" class="black-btn book-link">buy now</a>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="brand" style="text-decoration: none">watling street</a>
+        <div class="nav-links"></div>
+
+        <a href="/about/" class="bar-link">coffee</a>
+        <a href="/faq/" class="bar-link">about</a>
+        <a href="/book/" class="bar-link">faq</a>
+    </nav>
+</div>
+<div class="hero-spacer"></div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/pages/home.js') }}"></script>
+{% endblock %}
