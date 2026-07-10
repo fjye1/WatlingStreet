@@ -11,16 +11,19 @@ Test hello world
 <div class="hero-wrapper">
     <div class="hero-container">
         <img
-                src="{{ url_for('static', filename='images/back_image.webp') }}"
+                src="{{ url_for('static', filename='images/july.jpg') }}"
                 alt="Relaxing massage treatment"
                 class="hero-img rounded"
         />
         <div class="hero-text-overlay">
             <div class="hero-text-inner">
-                <h1 class="brand-name fade-text">Watling Street</h1>
                 <div class="hero-text-labels">
                     <span class="location fade-text">coffee roasting</span>
-                    <span class="tagline"></span>
+                </div>
+                <h1 class="brand-name fade-text">Watling Street</h1>
+                <div class="hero-text-labels">
+                    <span class="location fade-text"></span>
+                    <span class="tagline fade-text">dunstable</span>
                 </div>
             </div>
         </div>
@@ -31,40 +34,40 @@ Test hello world
         <a href="/" class="brand" style="text-decoration: none">watling street</a>
         <div class="nav-links"></div>
 
-        <a href="/about/" class="bar-link">coffee</a>
-        <a href="/faq/" class="bar-link">about</a>
-        <a href="/book/" class="bar-link">faq</a>
+        <a href="/coffee/" class="bar-link">coffee</a>
+        <a href="/about/" class="bar-link">about</a>
+        <a href="/faq/" class="bar-link">faq</a>
     </nav>
 </div>
 <div class="hero-spacer"></div>
 <div id="header"></div>
 
-    <section class="container my-5" id="about">
-      <div class="row justify-content-center mx-0">
+<section class="container my-5" id="about">
+    <div class="row justify-content-center mx-0">
         <div class="col-md-8 text-center about-block fade-text">
-          <h3>
-            <strong>
-              they say idle hands are the devil’s playthings—we say they’re a
-              gateway to something deeper.
-            </strong>
-          </h3>
+            <h3>
+                <strong>
+                    Welcome hero intro text
+                </strong>
+            </h3>
         </div>
 
         <div
-          class="col-md-8 text-center fade-text"
-          style="margin-top: 8rem; margin-bottom: 5rem"
+                class="col-md-8 text-center fade-text"
+                style="margin-top: 8rem; margin-bottom: 5rem"
         >
-          <p>
-            from our studio in Haggerston East London, we offer professional
-            massage therapy - deep tissue, restorative & pregnancy massage
-            treatments designed to relieve tension, reduce pain & restore
-            mind-body balance.
-          </p>
-        </div>
-      </div>
-    </section>
+            <p>
+                shot description text
+            </p>
 
-hello world infomation at the bottom of the screen
+        </div>
+        <h1 style="text-align: center; font-family: 'Noto', cursive; margin: 30px;">
+            Welcome
+        </h1>
+    </div>
+</section>
+
+
 {% endblock %}
 
 

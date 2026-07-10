@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Noto";
+  src: url("/static/fonts/NotoSerifDisplay_ExtraCondensed-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ffefe0
+
+body {
+  background-color: #ffefe0;
+  font-family: 'Noto', sans-serif;
+}

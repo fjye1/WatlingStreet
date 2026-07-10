@@ -75,14 +75,16 @@
 .hero-text-labels {
   display: flex;
   justify-content: space-between;
+  font-family: 'Noto', sans-serif;
 }
 
 .brand-name {
+  font-family: 'Noto', sans-serif;
   white-space: nowrap;
   margin: 0;
   color: #fff9eb;
   font-size: clamp(2.5rem, 16vw, 17rem);
-  font-weight: 700;
+  font-weight: 100;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -92,13 +94,14 @@
   font-size: clamp(0.6rem, 3.2vw, 2.1rem);
   font-weight: 100;
   letter-spacing: 0.02em;
-  transform: translate(0.4em, -0.4em);
+  transform: translateY(1em);
+
 }
 
 .tagline {
   color: #fff9eb;
   font-size: clamp(0.6rem, 3.2vw, 2.1rem);
-  font-weight: 400;
+  font-weight: 100;
   letter-spacing: 0.05em;
   transform: translateY(-0.8em);
 }
