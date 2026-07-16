@@ -1,0 +1,27 @@
+{% macro product_card() %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+{% endblock %}
+<!-- Product Card Component -->
+<div class="product-card">
+    <div class="image-container">
+        <!-- Replace the Unsplash URL with your actual product image path -->
+        <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                alt="Red running shoe"
+                class="product-image"
+        />
+    </div>
+
+    <!-- Black Bar Base -->
+    <div class="card-footer">
+        <p class="product-category">Running</p>
+        <h3 class="product-title">Sonic Boost Sneakers</h3>
+
+        <div class="footer-row">
+            <span class="product-price">$120.00</span>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+    </div>
+</div>
+{% endmacro %}
