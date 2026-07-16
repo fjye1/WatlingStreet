@@ -1,3 +1,4 @@
+/* 1. YOUR ORIGINAL GLOBAL STYLES (Preserved!) */
 @font-face {
   font-family: "Noto";
   src: url("/static/fonts/NotoSerifDisplay_ExtraCondensed-Medium.ttf") format("truetype");
@@ -5,9 +6,16 @@
   font-style: normal;
 }
 
-ffefe0
-
 body {
   background-color: #ffefe0;
   font-family: 'Noto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* 4. FOOTER STYLES */
+.simple-bg-footer {
+  background-color: #ebf1ff;
 }

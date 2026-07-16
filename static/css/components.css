@@ -1,0 +1,115 @@
+/* 2. OPTIONAL CARD WRAPPER
+   Use this class on a div wrapping your card if you want to center it,
+   rather than forcing the whole page body to do it! */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+
+/* 3. PRODUCT CARD STYLES */
+
+/* Card Container */
+.product-card {
+  width: 320px;
+  height: 420px;
+  background-color: #ffffff;
+  border-radius: 20px; /* Gives the card its rounded look */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Crucial to keep the image and footer clipped to the rounded corners */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Area Container */
+.image-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom image slightly on hover */
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Black Base Bar */
+.card-footer {
+  background-color: #121212; /* Sleek black base */
+  padding: 20px;
+  color: #ffffff; /* White text for contrast */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Product Title */
+.product-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-family: sans-serif; /* Keeps card clean, or delete this line to use Noto! */
+}
+
+/* Product Category / Subtitle */
+.product-category {
+  font-size: 0.8rem;
+  color: #a3a3a3; /* Muted gray text to create hierarchy */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Price and Action Layout */
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Product Price */
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+/* Buy Button */
+.buy-btn {
+  background-color: #ffffff;
+  color: #121212;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: sans-serif;
+}
+
+/* Button hover state */
+.buy-btn:hover {
+  background-color: #e5e5e5;
+}

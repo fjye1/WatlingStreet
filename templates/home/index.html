@@ -1,5 +1,5 @@
 {% extends 'base/base.html' %}
-
+{% from "partials/_product_card.html" import product_card %}
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
 {% endblock %}
@@ -44,27 +44,29 @@ Test hello world
 <section class="container my-5" id="about">
     <div class="row justify-content-center mx-0">
         <div class="col-md-8 text-center about-block fade-text">
-            <h3>
-                <strong>
-                    Welcome hero intro text
-                </strong>
-            </h3>
+
+            <h1 style="text-align: center; font-family: 'Noto', cursive; margin: 30px;">
+                Welcome
+            </h1>
+
+
         </div>
 
         <div
                 class="col-md-8 text-center fade-text"
                 style="margin-top: 8rem; margin-bottom: 5rem"
         >
-            <p>
-                shot description text
-            </p>
+
 
         </div>
-        <h1 style="text-align: center; font-family: 'Noto', cursive; margin: 30px;">
-            Welcome
-        </h1>
+
+
     </div>
+
 </section>
+<div>
+    {{ product_card() }}
+</div>
 
 
 {% endblock %}
