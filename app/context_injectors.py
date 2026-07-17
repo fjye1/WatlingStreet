@@ -1,4 +1,6 @@
 from flask import g
+
+
 def inject_globals():
     """
     Provides global context variables to all templates.
@@ -9,6 +11,7 @@ def inject_globals():
         "admin": False
 
     }
+
 
 def inject_dummy_products():
     """
@@ -49,6 +52,15 @@ def inject_dummy_products():
             'image': 'https://media.istockphoto.com/id/1242525063/photo/fresh-coffee-beans-sourced-from-ethiopia.jpg?s=612x612&w=0&k=20&c=KUpRe3cDLI4uSY18Gr9vacoq0MJU3E5addOJVNwrozs=',
             '_avg_rating': 4.9,
             '_lowest_box': {'price_gbp_unit': 6.49},
+            'is_active': True
+        },
+        {
+            'id': 5,
+            'name': 'Cinnamon Roll Blonde Roast',
+            'slug': 'cinnamon-roll-blonde-roast',
+            'image': 'https://media.istockphoto.com/id/1242525063/photo/fresh-coffee-beans-sourced-from-ethiopia.jpg?s=612x612&w=0&k=20&c=KUpRe3cDLI4uSY18Gr9vacoq0MJU3E5addOJVNwrozs=',
+            '_avg_rating': 3.9,
+            '_lowest_box': {'price_gbp_unit': 4.29},
             'is_active': True
         },
         {

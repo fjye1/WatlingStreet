@@ -64,11 +64,13 @@ Test hello world
     </div>
 
 </section>
-<div>
+<div class="product-grid">
+
     {% for product in dummy_products if product.is_active %}
-        {# Pass the product variable into the macro function #}
-        {{ product_card(product) }}
+    {# Pass the product variable into the macro function #}
+    {{ product_card(product) }}
     {% endfor %}
+
 </div>
 
 

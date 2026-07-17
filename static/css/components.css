@@ -9,6 +9,19 @@
 }
 
 
+/* Parent Grid Container */
+.product-grid {
+  display: grid;
+  /* Enforces up to 3 columns, dropping down nicely on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1080px; /* Crucial: 3 cards x 320px + gaps = ~1080px */
+  gap: 30px;
+  margin: 40px auto;
+  padding: 0 20px;
+  justify-items: center; /* Centers each card in its own column */
+  justify-content: center; /* Centers the columns themselves if there's leftover space */
+}
+
 /* 3. PRODUCT CARD STYLES */
 
 /* Card Container */
@@ -30,13 +43,7 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Image Area Container */
-.image-container {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-  background-color: #f9f9f9;
-}
+
 
 /* Product Image */
 .product-image {
@@ -46,6 +53,16 @@
   transition: transform 0.5s ease;
 }
 
+/* Image Area Container */
+.image-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+
+
 /* Zoom image slightly on hover */
 .product-card:hover .product-image {
   transform: scale(1.05);
@@ -54,7 +71,7 @@
 /* Black Base Bar */
 .card-footer {
   background-color: #121212; /* Sleek black base */
-  padding: 20px;
+  padding: 1.5rem;
   color: #ffffff; /* White text for contrast */
   display: flex;
   flex-direction: column;
