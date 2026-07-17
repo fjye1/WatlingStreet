@@ -65,7 +65,10 @@ Test hello world
 
 </section>
 <div>
-    {{ product_card() }}
+    {% for product in dummy_products if product.is_active %}
+        {# Pass the product variable into the macro function #}
+        {{ product_card(product) }}
+    {% endfor %}
 </div>
 
 

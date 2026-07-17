@@ -1,25 +1,29 @@
-{% macro product_card() %}
+{% macro product_card(product) %}
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
 {% endblock %}
 <!-- Product Card Component -->
 <div class="product-card">
     <div class="image-container">
-        <!-- Replace the Unsplash URL with your actual product image path -->
+        <!-- Uses the real image URL from your dummy product list -->
         <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-                alt="Red running shoe"
-                class="product-image"
+            src="{{ product.image }}"
+            alt="{{ product.name }}"
+            class="product-image"
         />
     </div>
 
     <!-- Black Bar Base -->
     <div class="card-footer">
-        <p class="product-category">Running</p>
-        <h3 class="product-title">Sonic Boost Sneakers</h3>
+        {# Fallback to 'Coffee' if category isn't defined #}
+        <p class="product-category">{{ product.category or 'Premium Coffee' }}</p>
+        <h3 class="product-title">{{ product.name }}</h3>
 
         <div class="footer-row">
-            <span class="product-price">$120.00</span>
+            {# Checks your dummy data's pricing structure #}
+
+            <span class="product-price">£{{ product._lowest_box.price_gbp_unit }}</span>
+
             <button class="buy-btn">Add to Cart</button>
         </div>
     </div>
