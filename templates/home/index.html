@@ -1,7 +1,8 @@
 {% extends 'base/base.html' %}
 {% from "partials/_product_card.html" import product_card %}
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hero/hero-home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hero/navbar.css') }}">
 {% endblock %}
 
 {% block title %}Watling Street Home{% endblock %}
@@ -33,7 +34,7 @@ Test hello world
         <a href="/" class="brand" style="text-decoration: none">watling street</a>
         <div class="nav-links"></div>
 
-        <a href="/coffee/" class="bar-link">coffee</a>
+        <a href="{{ url_for('home.coffee') }}" class="bar-link">coffee</a>
         <a href="/about/" class="bar-link">about</a>
         <a href="/faq/" class="bar-link">faq</a>
     </nav>

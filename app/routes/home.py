@@ -12,3 +12,10 @@ def index():
 
     return render_template(
         "home/index.html")
+
+@home_bp.route("/coffee/")
+def coffee():
+    # Preload products with boxes and comments
+
+    return render_template(
+        "home/coffee.html")
