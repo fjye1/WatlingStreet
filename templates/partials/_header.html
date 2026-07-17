@@ -1,5 +1,42 @@
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hero/hero-home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hero/navbar.css') }}">
+{% endblock %}
 <header>
-    <strong>Header Test
-    </strong>
+<div class="hero-wrapper">
+    <div class="hero-container">
+        <img
+                src="{{ url_for('static', filename='images/july.jpg') }}"
+                alt="Relaxing massage treatment"
+                class="hero-img rounded"
+        />
+        <div class="hero-text-overlay">
+            <div class="hero-text-inner">
+                <div class="hero-text-labels">
+                    <span class="location fade-text">coffee roasting</span>
+                </div>
+                <h1 class="brand-name fade-text">Watling Street</h1>
+                <div class="hero-text-labels">
+                    <span class="location fade-text"></span>
+                    <span class="tagline fade-text">dunstable</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="brand" style="text-decoration: none">watling street</a>
+        <div class="nav-links"></div>
+
+        <a href="{{ url_for('home.coffee') }}" class="bar-link">coffee</a>
+        <a href="/about/" class="bar-link">about</a>
+        <a href="/faq/" class="bar-link">faq</a>
+    </nav>
+</div>
+<div class="hero-spacer"></div>
+<div id="header"></div>
 
 </header>
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/pages/home.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% from "partials/_product_card.html" import product_card %}
+{% block title %}Coffee{% endblock %}
+
+{% block content %}
+
+<div class="product-grid">
+
+    {% for product in dummy_products if product.is_active %}
+    {# Pass the product variable into the macro function #}
+    {{ product_card(product) }}
+    {% endfor %}
+
+</div>
+{% endblock %}
