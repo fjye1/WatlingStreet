@@ -72,7 +72,7 @@ def register():
         login_user(new_user)
 
         # 5️ Merge guest basket into DB cart
-        merge_session_basket_to_cart(current_user)
+        # merge_session_basket_to_cart(current_user)
 
         # 6️ Redirect to home page
         return redirect(url_for("home.index"))
