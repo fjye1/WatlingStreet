@@ -4,7 +4,7 @@
 {% endblock %}
 <header>
 <div class="hero-wrapper">
-    <div class="hero-container">
+    <div class="hero-container{% if hero_shrink %} shrink{% endif %}">
         <img
                 src="{{ url_for('static', filename='images/july.jpg') }}"
                 alt="Relaxing massage treatment"
@@ -37,6 +37,3 @@
 <div id="header"></div>
 
 </header>
-{% block extra_js %}
-<script src="{{ url_for('static', filename='js/pages/home.js') }}"></script>
-{% endblock %}
