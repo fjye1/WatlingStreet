@@ -20,6 +20,11 @@ var/
 .installed.cfg
 *.egg
 
+# --- Readme.md
+
+README.md
+
+
 # --- Flask & Environment ---
 .env
 instance/
