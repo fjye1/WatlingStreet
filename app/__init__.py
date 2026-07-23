@@ -1,9 +1,11 @@
 from flask import Flask
+from .extensions import db, login_manager
 from .context_injectors import inject_globals, inject_dummy_products
 from flask_wtf import CSRFProtect
+from flask_migrate import Migrate
 
 csrf = CSRFProtect()  # just create it here
-
+migrate = Migrate()
 def create_app():
     app = Flask(
         __name__,
@@ -13,6 +15,8 @@ def create_app():
     app.config.from_object("config.Config")
 
     csrf.init_app(app)
+    db.init_app(app)
+    migrate.init_app(app, db)  # Connects Migrate to App and DB
 
     from app.routes.home import home_bp
     from app.routes.auth import auth_bp
