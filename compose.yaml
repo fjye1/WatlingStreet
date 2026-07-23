@@ -20,7 +20,7 @@ services:
     build: .
     container_name: flask_app
     ports:
-      - "5000:5000"
+      - "5002:5000"
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
       - FLASK_APP=${FLASK_APP}
