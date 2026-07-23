@@ -23,3 +23,15 @@ Internet (Port 80/443)
 │                         │ (No ports map)│        │
 │                         └───────────────┘        │
 └──────────────────────────────────────────────────┘
+
+
+To start app locally move to file directory. 
+
+activate the environment. 
+
+PowerShell
+
+.venv\Scripts\Activate.ps1
+
+to start run the entry point
+python run.py 

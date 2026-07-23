@@ -14,6 +14,9 @@ def create_app():
     )
     app.config.from_object("config.Config")
 
+    # 3. Import models so SQLAlchemy/Alembic knows they exist
+    from . import models
+
     csrf.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)  # Connects Migrate to App and DB
